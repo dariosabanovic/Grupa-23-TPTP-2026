@@ -7,9 +7,9 @@ Web stranica posvećena historiji NBA lige, najznačajnijim igračima i statisti
 ## Članovi grupe
 | Ime i Prezime | GitHub | Zaduženje |
 |---|---|---|
-| (Dario Šabanović ) | @dariosabanovic | HTML + struktura |
-| (David Tanasković) | @tana0o | CSS + dizajn |
-| (Dino Lišić) | @N0d123 | JavaScript + logika |
+| Dario Šabanović  | @dariosabanovic | HTML + struktura |
+| David Tanasković | @tana0o | CSS + dizajn |
+| Dino Lišić | @N0d123 | JavaScript + logika |
 
 ## Tehnologije
 - HTML5
