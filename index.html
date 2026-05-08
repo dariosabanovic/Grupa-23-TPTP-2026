@@ -9,10 +9,17 @@
 
 </head>
 
-<body>
+<body id="top">
 
 <header>
+    
+
     <div class="header-flex">
+
+        <button id="tema-dugme">
+    🌙 Tamni mod
+</button>
+    
         <div class="logo">NBA HISTORIJA</div>
 
         <div class="menu">
@@ -33,27 +40,51 @@
     </p>
 </section>
 
+<section class="fun-fact-sekcija">
+
+    <h2>NBA Fun Fact</h2>
+
+    <button id="fun-fact-dugme">
+        Novi Fun Fact
+    </button>
+
+    <p id="nba-fact"></p>
+
+</section>
+
+<section class="tajmer-sekcija">
+
+    <h2>LeBron NBA Tajmer</h2>
+
+    <p id="lebron-tajmer"></p>
+
+</section>
+
 <div class="layout">
 
-<nav>
+<nav>   
 
-    <button onclick="filterCards('legenda')">
+    <button class="filter-btn aktivan" data-filter="sve">
+    Sve
+    </button>
+
+    <button class="filter-btn" data-filter="legenda">
         Legende NBA
     </button>
 
-    <button onclick="filterCards('rekord')">
+    <button class="filter-btn" data-filter="rekord">
         Rekordi NBA
     </button>
 
-    <button onclick="filterCards('tim')">
+    <button class="filter-btn" data-filter="tim">
         Larry O'Brien Trophy
     </button>
 
-    <button onclick="filterCards('era')">
+    <button class="filter-btn" data-filter="era">
         NBA ERE
     </button>
 
-    <button onclick="filterCards('mvp')">
+    <button class="filter-btn" data-filter="mvp">
         MVP NBA
     </button>
 
@@ -69,10 +100,11 @@
 
 <div class="cards">
 
-<article class="card" data-category="legenda">
+<article class="kartica" data-kategorija="mvp">
 
     <img src="images/jordan.jpg"
-    alt="Michael Jordan u dresu Chicago Bullsa">
+    alt="Michael Jordan u dresu Chicago Bullsa"
+    loading="lazy">
 
     <div class="card-content">
 
@@ -90,10 +122,11 @@
 
 </article>
 
-<article class="card" data-category="legenda">
+<article class="kartica" data-kategorija="legenda">
 
     <img src="images/kobe.jpg"
-    alt="Kobe Bryant tokom utakmice Lakersa">
+    alt="Kobe Bryant tokom utakmice Lakersa"
+    loading="lazy">
 
     <div class="card-content">
 
@@ -111,10 +144,11 @@
 
 </article>
 
-<article class="card" data-category="legenda">
+<article class="kartica" data-kategorija="rekord">
 
     <img src="images/lebron.jpg"
-    alt="LeBron James tokom NBA utakmice">
+    alt="LeBron James tokom NBA utakmice"
+    loading="lazy">
 
     <div class="card-content">
 
@@ -132,10 +166,11 @@
 
 </article>
 
-<article class="card" data-category="legenda">
+<article class="kartica" data-kategorija="era">
 
     <img src="images/magic.jpg"
-    alt="Magic Johnson u Lakers dresu">
+    alt="Magic Johnson u Lakers dresu"
+    loading="lazy">
 
     <div class="card-content">
 
@@ -153,10 +188,11 @@
 
 </article>
 
-<article class="card" data-category="legenda">
+<article class="kartica" data-kategorija="legenda">
 
     <img src="images/bird.jpg"
-    alt="Larry Bird u Celtics dresu">
+    alt="Larry Bird u Celtics dresu"
+    loading="lazy">
 
     <div class="card-content">
 
@@ -174,10 +210,11 @@
 
 </article>
 
-<article class="card" data-category="legenda">
+<article class="kartica" data-kategorija="tim">
 
     <img src="images/shaq.jpg"
-    alt="Shaquille O'Neal zakucavanje">
+    alt="Shaquille O'Neal zakucavanje"
+    loading="lazy">
 
     <div class="card-content">
 
@@ -205,10 +242,11 @@
 
     <h3>NBA video</h3>
 
-    <iframe
-    src="https://www.youtube.com/embed/ydLJtKlVVZw"
-    title="NBA highlights video">
-    </iframe>
+<iframe
+src="https://www.youtube.com/embed/ydLJtKlVVZw"
+title="NBA highlights video"
+allowfullscreen>
+</iframe>
 
     <p>
         Video prikazuje atraktivne NBA poteze,
@@ -242,10 +280,12 @@
         </a>
 
     </p>
-
+<p>
+    <a href="#top">Skoči na vrh</a>
+</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="tptpskripte.js"></script>
 
 </body>
 </html>
