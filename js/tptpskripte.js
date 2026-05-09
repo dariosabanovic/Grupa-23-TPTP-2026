@@ -51,6 +51,146 @@ function filtrirajKartice(kategorija) {
 }
 
 
+
+// ============================================================
+// REGEX FUNKCIJE ZA VALIDACIJU
+// Koriste se u validirajFormu() ispod
+// ============================================================
+
+// Regex za email: traži format nesto@nesto.nesto
+// ^ = početak stringa
+// [^\s@]+ = jedan ili više znakova koji nisu razmak ili @
+// @ = literal obavezan znak
+// \. = tačka (escaped jer tačka u regexu znači bilo koji znak)
+// [^\s@]+ = domen ekstenzija (npr. com, ba, org)
+// $ = kraj stringa
+// Uz pomoć Claude-a sam razumio svaki dio ovog patterna
+const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// Regex za telefon: dozvoljava brojeve, crtice i razmake
+// ^ = početak stringa
+// [0-9\s\-] = cifra, razmak ili crtica
+// {9,15} = minimalno 9, maksimalno 15 znakova ukupno
+// $ = kraj stringa
+// Uz pomoć Claude-a sam razumio da \- mora biti escaped u character classu
+const regexTelefon = /^[0-9\s\-]{9,15}$/;
+
+function provjeriEmail(email) {
+    return regexEmail.test(email);
+}
+
+function provjeriTelefon(telefon) {
+    return regexTelefon.test(telefon);
+}
+
+// ============================================================
+// VALIDACIJA FORME
+// Provjerava svako polje pri kliku na "Pošalji"
+// Prikazuje grešku pored svakog neispravnog polja
+// Pri uspjehu prikazuje personaliziranu poruku sa imenom
+// ============================================================
+
+function prikaziGresku(idGreske, poruka) {
+    const el = document.getElementById(idGreske);
+    if (el) {
+        el.textContent = poruka;
+        el.style.color = "red";
+    }
+}
+
+function obrisiGresku(idGreske) {
+    const el = document.getElementById(idGreske);
+    if (el) el.textContent = "";
+}
+
+function validirajFormu() {
+    let ispravno = true;
+
+    // Provjera: Ime
+    const ime = document.getElementById("ime").value.trim();
+    if (ime === "") {
+        prikaziGresku("greska-ime", "Ime je obavezno.");
+        ispravno = false;
+    } else {
+        obrisiGresku("greska-ime");
+    }
+
+    // Provjera: Prezime
+    const prezime = document.getElementById("prezime").value.trim();
+    if (prezime === "") {
+        prikaziGresku("greska-prezime", "Prezime je obavezno.");
+        ispravno = false;
+    } else {
+        obrisiGresku("greska-prezime");
+    }
+
+    // Provjera: Email
+    const email = document.getElementById("email").value.trim();
+    if (!provjeriEmail(email)) {
+        prikaziGresku("greska-email", "Unesite ispravan email (npr. ime@domen.com).");
+        ispravno = false;
+    } else {
+        obrisiGresku("greska-email");
+    }
+
+    // Provjera: Telefon
+    const telefon = document.getElementById("telefon").value.trim();
+    if (!provjeriTelefon(telefon)) {
+        prikaziGresku("greska-telefon", "Telefon: samo brojevi, crtice i razmaci (9-15 znakova).");
+        ispravno = false;
+    } else {
+        obrisiGresku("greska-telefon");
+    }
+
+    // Provjera: Dropdown tema upita
+    const temaUpita = document.getElementById("tema-upita").value;
+    if (temaUpita === "" || temaUpita === "odaberi") {
+        prikaziGresku("greska-tema", "Odaberite temu upita.");
+        ispravno = false;
+    } else {
+        obrisiGresku("greska-tema");
+    }
+
+    // Provjera: Textarea poruka (min. 10 znakova)
+    const poruka = document.getElementById("poruka").value.trim();
+    if (poruka.length < 10) {
+        prikaziGresku("greska-poruka", "Poruka mora imati najmanje 10 znakova.");
+        ispravno = false;
+    } else {
+        obrisiGresku("greska-poruka");
+    }
+
+    // Sve ispravno — prikaži uspješnu poruku sa imenom
+    if (ispravno) {
+        const uspjesna = document.getElementById("uspjesna-poruka");
+        if (uspjesna) {
+            uspjesna.textContent = `Hvala, ${ime}! Vaša poruka je uspješno poslana.`;
+            uspjesna.style.color = "green";
+            uspjesna.style.fontWeight = "bold";
+        }
+    }
+
+    return ispravno;
+}
+
+function resetujFormu() {
+    // Briše sva polja forme
+    const forma = document.getElementById("kontakt-forma");
+    if (forma) forma.reset();
+
+    // Briše sve poruke o greškama
+    document.querySelectorAll(".greska").forEach(function(g) {
+        g.textContent = "";
+    });
+
+    // Briše uspješnu poruku
+    const uspjesna = document.getElementById("uspjesna-poruka");
+    if (uspjesna) uspjesna.textContent = "";
+}
+
+
+
+
 // ============================================================================================================
 
 // LEBRON JAMES NBA TAJMER
