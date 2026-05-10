@@ -285,3 +285,19 @@ const funFactDugme = document.getElementById("fun-fact-dugme");
 if (funFactDugme) {
     funFactDugme.addEventListener("click", prikaziFunFact);
 }
+
+// Posalji dugme — poziva validaciju forme
+const posaljiDugme = document.getElementById("posalji-dugme");
+if (posaljiDugme) {
+    posaljiDugme.addEventListener("click", function(e) {
+        e.preventDefault();
+        validirajFormu();
+    });
+}
+
+// Reset dugme — brise formu i poruke o greskama
+const resetDugme = document.getElementById("reset-dugme");
+if (resetDugme) {
+    resetDugme.addEventListener("click", resetujFormu);
+}
+
