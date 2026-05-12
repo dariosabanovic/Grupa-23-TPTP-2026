@@ -1,302 +1,324 @@
+/* =========================================
+   Css varijable (Arhitektura)
+   ========================================= */
+:root {
+  /* Primarne boje */
+  --color-primary: #fdb927;
+  --color-bg-body: #0a0a0a;
+  --color-bg-card: #151515;
+  --color-bg-header: #111;
+  --color-bg-alt: #222;
+  
+  /* Tekst i obrubi */
+  --color-text-light: #ffffff;
+  --color-text-muted: #aaaaaa;
+  --color-border: #333333;
+  --color-error: #ff6666;
+  --color-success: #7CFC00;
+
+  /* Layout i tranzicije */
+  --border-radius-lg: 15px;
+  --border-radius-sm: 8px;
+  --transition-fast: 0.3s ease;
+}
+
+/* Upotreba ai-a: Ai mi je pomogao u postavljanju ove arhitekture varijabli 
+   kako bih mogao mijenjati boje na cijelom sajtu odjednom bez ručnog traženja koda. */
+
+/* =========================================
+   Reset i osnovni stilovi
+   ========================================= */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: Arial, sans-serif;
-  background: #0a0a0a;
-  color: white
+  background: var(--color-bg-body);
+  color: var(--color-text-light);
 }
 
+/* =========================================
+   Header i navigacija
+   ========================================= */
 header {
-  background: #111;
+  background: var(--color-bg-header);
   padding: 20px;
   position: sticky;
   top: 0;
-  z-index: 10
+  z-index: 10;
 }
 
-header h1 {
-  color: #fdb927
-}
-
-.logo {
-  color: #fdb927;
+header h1, .logo {
+  color: var(--color-primary);
   font-size: 26px;
-  font-weight: bold
+  font-weight: bold;
 }
 
 .header-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 .menu a {
-  color: white;
+  color: var(--color-text-light);
   text-decoration: none;
-  margin: 0 10px
+  margin: 0 10px;
+  transition: var(--transition-fast);
 }
 
 .menu a:hover {
-  color: #fdb927
+  color: var(--color-primary);
 }
 
+/* =========================================
+   Layout struktura
+   ========================================= */
 .layout {
   display: grid;
   grid-template-columns: 220px 1fr 300px;
   gap: 25px;
-  padding: 30px
+  padding: 30px;
 }
 
 main {
   max-width: 1100px;
   margin: auto;
-  padding: 35px
+  padding: 35px;
 }
 
 section {
-  margin: 45px 0
+  margin: 45px 0;
 }
 
-h2 {
-  color: #fdb927;
-  margin-bottom: 15px
+nav, aside {
+  background: var(--color-bg-card);
+  padding: 20px;
+  border-radius: var(--border-radius-lg);
+  height: max-content;
+  border: 1px solid var(--color-border);
+}
+
+/* =========================================
+   Komponente (Cards, tables, gallery)
+   ========================================= */
+h2, h3, .card a {
+  color: var(--color-primary);
+  margin-bottom: 15px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  background: #151515
+  background: var(--color-bg-card);
 }
 
-th,
-td {
+th, td {
   padding: 14px;
-  border: 1px solid #333;
-  text-align: left
+  border: 1px solid var(--color-border);
+  text-align: left;
 }
 
 th {
-  background: #222;
-  color: #fdb927
-}
-
-nav {
-  background: #151515;
-  padding: 20px;
-  border-radius: 15px;
-  height: max-content
-}
-
-/* Upitno */
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 12px
-}
-
-nav a:hover {
-  color: #fdb927
-}
-
-nav h3,
-aside h3 {
-  color: #fdb927;
-  margin-bottom: 15px
-}
-
-nav button {
-  display: block;
-  width: 100%;
-  margin: 8px 0;
-  padding: 10px;
-  background: #222;
-  color: white;
-  border: 1px solid #333;
-  border-radius: 8px;
-  cursor: pointer
-}
-
-nav button:hover {
-  background: #fdb927;
-  color: black
-}
-
-.hero {
-  padding: 70px 30px;
-  text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("https://images.unsplash.com/photo-1519861531473-9200262188bf?q=80&w=1600") center/cover
-}
-
-.hero h1 {
-  font-size: 55px;
-  color: #fdb927
+  background: var(--color-bg-alt);
+  color: var(--color-primary);
 }
 
 .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin-top: 25px
+  margin-top: 25px;
 }
 
 .card {
-  background: #151515;
-  border-radius: 15px;
+  background: var(--color-bg-card);
+  border-radius: var(--border-radius-lg);
   overflow: hidden;
-  border: 1px solid #333
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-fast);
+}
+
+/* Upotreba ai-a: Ai je sugerisao dodavanje transform i box-shadow efekata na hover 
+   kako bi kartice dobile dubinu i profesionalniji izgled. */
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 20px rgba(253, 185, 39, 0.1);
 }
 
 .card img {
   width: 100%;
   height: 190px;
-  object-fit: cover
-}
-
-.card-content {
-  padding: 15px
-}
-
-.card a,
-h3 {
-  color: #fdb927
+  object-fit: cover;
 }
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px
+  gap: 18px;
 }
 
 .gallery img {
   width: 100%;
   height: 230px;
   object-fit: cover;
-  border-radius: 12px
+  border-radius: 12px;
 }
 
-aside {
-  background: #151515;
-  padding: 20px;
-  border-radius: 15px;
-  height: max-content
+/* =========================================
+   Hero sekcija
+   ========================================= */
+/* Upotreba ai-a: Ai mi je pomogao napisati keyframes animaciju za naslov 
+   kako bi se tekst lagano pojavio pri učitavanju stranice. */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-iframe {
-  width: 100%;
-  height: 220px;
-  border: 0;
-  border-radius: 10px
-}
-
-ul {
-  margin-left: 25px;
-  line-height: 1.8
-}
-
-.image-map-img {
-  max-width: 100%;
-  border-radius: 15px
-}
-
-.top-link {
-  color: #fdb927
-}
-
-footer {
+.hero {
+  padding: 70px 30px;
   text-align: center;
-  background: #000;
-  padding: 25px;
-  color: #aaa
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), 
+              url("https://images.unsplash.com/photo-1519861531473-9200262188bf?q=80&w=1600") center/cover;
 }
 
+.hero h1 {
+  font-size: 55px;
+  color: var(--color-primary);
+  animation: fadeIn 1s ease-out;
+}
+
+/* =========================================
+   Forme i dugmad
+   ========================================= */
 form {
-  background: #151515;
+  background: var(--color-bg-card);
   padding: 25px;
-  border-radius: 15px
+  border-radius: var(--border-radius-lg);
 }
 
 label {
   display: block;
   margin-top: 15px;
-  color: #fdb927
+  color: var(--color-primary);
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
   width: 100%;
   padding: 12px;
   margin-top: 6px;
-  border-radius: 8px;
-  border: 2px solid transparent
+  border-radius: var(--border-radius-sm);
+  border: 2px solid transparent;
+  transition: var(--transition-fast);
 }
 
-textarea {
-  height: 120px
-}
-
-.error {
-  color: #ff6666;
-  font-size: 14px
-}
-
-.invalid {
-  border-color: #ff3333
-}
-
-.success {
-  margin-top: 20px;
-  color: #7CFC00;
-  font-weight: bold
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
 }
 
 button {
   margin-top: 20px;
   padding: 12px 20px;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--border-radius-sm);
   cursor: pointer;
-  font-weight: bold
+  font-weight: bold;
+  transition: var(--transition-fast);
+}
+
+nav button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  background: var(--color-bg-alt);
+  color: var(--color-text-light);
+  border: 1px solid var(--color-border);
+}
+
+nav button:hover {
+  background: var(--color-primary);
+  color: black;
 }
 
 .submit {
-  background: #fdb927;
-  color: black
+  background: var(--color-primary);
+  color: black;
 }
 
 .reset {
-  background: #333;
-  color: white
+  background: var(--color-border);
+  color: var(--color-text-light);
 }
 
-@media(max-width:900px) {
+.error { color: var(--color-error); font-size: 14px; }
+.invalid { border-color: var(--color-error); }
+.success { color: var(--color-success); font-weight: bold; margin-top: 20px; }
+
+/* =========================================
+   Footer
+   ========================================= */
+footer {
+  text-align: center;
+  background: #000;
+  padding: 25px;
+  color: var(--color-text-muted);
+}
+
+/* =========================================
+   Responzivnost (Media queries - 3 breakpointa)
+   ========================================= */
+/* Upotreba ai-a: Ai mi je pomogao definisati tri tačna breakpointa i specifična 
+   pravila za mobilne uređaje, poput pretvaranja navigacije u kolonu i skrolovanja tabela. */
+
+/* 1. Breakpoint: Tableti i manji laptopi */
+@media (max-width: 1024px) {
   .layout {
-    grid-template-columns: 1fr
+    grid-template-columns: 200px 1fr;
+    padding: 20px;
   }
+  aside {
+    display: none;
+  }
+}
 
+/* 2. Breakpoint: Veći telefoni i manji tableti */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
   .cards {
-    grid-template-columns: 1fr
+    grid-template-columns: repeat(2, 1fr);
   }
-
   .hero h1 {
-    font-size: 38px
+    font-size: 42px;
   }
+}
 
-  .gallery {
-    grid-template-columns: 1fr
+/* 3. Breakpoint: Mobilni uređaji */
+@media (max-width: 480px) {
+  .cards, .gallery {
+    grid-template-columns: 1fr;
   }
-
+  .hero h1 {
+    font-size: 32px;
+  }
+  .header-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
   table {
-    font-size: 13px
+    font-size: 11px;
+    display: block;
+    overflow-x: auto;
   }
-
 }
