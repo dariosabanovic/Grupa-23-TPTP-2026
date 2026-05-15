@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NBA Historija - Početna</title>
+
+ <link rel="stylesheet" href="tptpstil.css">
+
+</head>
+
+<body>
+
+<header>
+    <div class="header-flex">
+        <div class="logo">NBA HISTORIJA</div>
+
+        <div class="menu">
+            <a href="index.html">Početna</a>
+            <a href="sadrzaj.html">Sadržaj</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="https://github.com/" target="_blank">GitHub</a>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>NBA Historija</h1>
+
+    <p>
+        Od 1946. godine do moderne ere trojki,
+        NBA je postala globalni simbol košarke.
+    </p>
+</section>
+
+<div class="layout">
+
+<nav>
+
+    <button onclick="filterCards('legenda')">
+        Legende NBA
+    </button>
+
+    <button onclick="filterCards('rekord')">
+        Rekordi NBA
+    </button>
+
+    <button onclick="filterCards('tim')">
+        Larry O'Brien Trophy
+    </button>
+
+    <button onclick="filterCards('era')">
+        NBA ERE
+    </button>
+
+    <button onclick="filterCards('mvp')">
+        MVP NBA
+    </button>
+
+</nav>
+
+<main>
+
+<section>
+
+<h2 style="color:#fdb927">
+    Najvažniji NBA sadržaj
+</h2>
+
+<div class="cards">
+
+<article class="card" data-category="legenda">
+
+    <img src="images/jordan.jpg"
+    alt="Michael Jordan u dresu Chicago Bullsa">
+
+    <div class="card-content">
+
+        <h3>Michael Jordan</h3>
+
+        <p>
+            Legenda Bullsa i simbol NBA dominacije 90-ih.
+        </p>
+
+        <a href="sadrzaj.html#galerija">
+            Detaljnije
+        </a>
+
+    </div>
+
+</article>
+
+<article class="card" data-category="legenda">
+
+    <img src="images/kobe.jpg"
+    alt="Kobe Bryant tokom utakmice Lakersa">
+
+    <div class="card-content">
+
+        <h3>Kobe Bryant</h3>
+
+        <p>
+            Poznat po Mamba mentalitetu i 5 NBA titula.
+        </p>
+
+        <a href="sadrzaj.html#tabela">
+            Detaljnije
+        </a>
+
+    </div>
+
+</article>
+
+<article class="card" data-category="legenda">
+
+    <img src="images/lebron.jpg"
+    alt="LeBron James tokom NBA utakmice">
+
+    <div class="card-content">
+
+        <h3>LeBron James</h3>
+
+        <p>
+            Jedan od najkompletnijih igrača u historiji NBA lige.
+        </p>
+
+        <a href="sadrzaj.html#galerija">
+            Detaljnije
+        </a>
+
+    </div>
+
+</article>
+
+<article class="card" data-category="legenda">
+
+    <img src="images/magic.jpg"
+    alt="Magic Johnson u Lakers dresu">
+
+    <div class="card-content">
+
+        <h3>Magic Johnson</h3>
+
+        <p>
+            Legenda Lakersa i jedan od najboljih plejmejkera.
+        </p>
+
+        <a href="sadrzaj.html#galerija">
+            Detaljnije
+        </a>
+
+    </div>
+
+</article>
+
+<article class="card" data-category="legenda">
+
+    <img src="images/bird.jpg"
+    alt="Larry Bird u Celtics dresu">
+
+    <div class="card-content">
+
+        <h3>Larry Bird</h3>
+
+        <p>
+            Jedan od najboljih šutera i lider Celticsa.
+        </p>
+
+        <a href="sadrzaj.html#galerija">
+            Detaljnije
+        </a>
+
+    </div>
+
+</article>
+
+<article class="card" data-category="legenda">
+
+    <img src="images/shaq.jpg"
+    alt="Shaquille O'Neal zakucavanje">
+
+    <div class="card-content">
+
+        <h3>Shaquille O'Neal</h3>
+
+        <p>
+            Dominantni centar poznat po snazi i zakucavanjima.
+        </p>
+
+        <a href="sadrzaj.html#galerija">
+            Detaljnije
+        </a>
+
+    </div>
+
+</article>
+
+</div>
+
+</section>
+
+</main>
+
+<aside>
+
+    <h3>NBA video</h3>
+
+    <iframe
+    src="https://www.youtube.com/embed/ydLJtKlVVZw"
+    title="NBA highlights video">
+    </iframe>
+
+    <p>
+        Video prikazuje atraktivne NBA poteze,
+        zakucavanja i historijske momente.
+    </p>
+
+</aside>
+
+</div>
+
+<footer>
+
+    <p>
+        Autori: Sabanovic Dario,
+        David Tanaskovic,
+        Dino Lisic | 2026
+    </p>
+
+    <p>
+
+        <a href="https://www.nba.com/"
+        target="_blank">
+            NBA.com
+        </a>
+
+        |
+
+        <a href="https://www.instagram.com/nba/"
+        target="_blank">
+            Instagram
+        </a>
+
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
