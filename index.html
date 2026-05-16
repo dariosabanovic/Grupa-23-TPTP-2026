@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NBA Historija - Početna</title>
+
+<link rel="stylesheet" href="css/tptpstil.css">
+
+</head>
+
+<body>
+
+<header>
+    <div class="header-flex">
+        <div class="logo">NBA HISTORIJA</div>
+
+        <div class="menu">
+            <a href="index.html">Početna</a>
+            <a href="sadrzaj.html">Sadržaj</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a href="https://github.com/" target="_blank">GitHub</a>
+                    </div>
+    </div>
+</header>
+
+<section class="hero">
+
+    <h1>NBA Historija</h1>
+
+    <p>
+        Od 1946. godine do moderne ere trojki,
+        NBA je postala globalni simbol košarke.
+    </p>
+
+    <div class="tema-wrapper">
+
+        <button id="tema-dugme" onclick="toggleTema()">
+            🌙 Tamni mod
+        </button>
+
+    </div>
+
+</section>
+<div class="layout">
+
+<nav>
+
+    <button onclick="otvoriSekciju('legende')">
+        Legende NBA
+    </button>
+
+    <button onclick="otvoriSekciju('rekordi')">
+        Rekordi NBA
+    </button>
+
+    <button onclick="otvoriSekciju('trofej')">
+        Larry O'Brien Trophy
+    </button>
+
+    <button onclick="otvoriSekciju('ere')">
+        NBA ERE
+    </button>
+
+    <button onclick="otvoriSekciju('mvp')">
+        MVP NBA
+    </button>
+
+</nav>
+
+<main>
+
+<section>
+
+
+
+<div class="cards">
+
+<article class="card" data-category="legenda">
+    <img src="images/jordan.jpg" alt="Michael Jordan u dresu Chicago Bullsa">
+
+    <div class="card-content">
+        <h3>Michael Jordan</h3>
+        <p>Legenda Bullsa i simbol NBA dominacije 90-ih.</p>
+
+        <a href="https://en.wikipedia.org/wiki/Michael_Jordan"
+        target="_blank">
+            Detaljnije
+        </a>
+    </div>
+</article>
+
+<article class="card" data-category="legenda">
+    <img src="images/kobe.jpg" alt="Kobe Bryant tokom utakmice Lakersa">
+
+    <div class="card-content">
+        <h3>Kobe Bryant</h3>
+        <p>Poznat po Mamba mentalitetu i 5 NBA titula.</p>
+
+        <a href="https://en.wikipedia.org/wiki/Kobe_Bryant"
+        target="_blank">
+            Detaljnije
+        </a>
+    </div>
+</article>
+
+<article class="card" data-category="legenda">
+    <img src="images/lebron.jpg" alt="LeBron James tokom NBA utakmice">
+
+    <div class="card-content">
+        <h3>LeBron James</h3>
+        <p>Jedan od najkompletnijih igrača u historiji NBA lige.</p>
+
+        <a href="https://en.wikipedia.org/wiki/LeBron_James"
+        target="_blank">
+            Detaljnije
+        </a>
+    </div>
+</article>
+
+<article class="card" data-category="legenda">
+    <img src="images/magic.jpg" alt="Magic Johnson u Lakers dresu">
+
+    <div class="card-content">
+        <h3>Magic Johnson</h3>
+        <p>Legenda Lakersa i jedan od najboljih plejmejkera.</p>
+
+        <a href="https://en.wikipedia.org/wiki/Magic_Johnson"
+        target="_blank">
+            Detaljnije
+        </a>
+    </div>
+</article>
+
+<article class="card" data-category="legenda">
+    <img src="images/bird.jpg" alt="Larry Bird u Celtics dresu">
+
+    <div class="card-content">
+        <h3>Larry Bird</h3>
+        <p>Jedan od najboljih šutera i lider Celticsa.</p>
+
+        <a href="https://en.wikipedia.org/wiki/Larry_Bird"
+        target="_blank">
+            Detaljnije
+        </a>
+    </div>
+</article>
+
+<article class="card" data-category="legenda">
+    <img src="images/shaq.jpg" alt="Shaquille O'Neal zakucavanje">
+
+    <div class="card-content">
+        <h3>Shaquille O'Neal</h3>
+        <p>Dominantni centar poznat po snazi i zakucavanjima.</p>
+
+        <a href="https://en.wikipedia.org/wiki/Shaquille_O%27Neal"
+        target="_blank">
+            Detaljnije
+        </a>
+    </div>
+</article>
+
+</div>
+<div id="legende" class="sekcija">
+    <h2>Legende NBA</h2>
+    <p>
+        Michael Jordan, Kobe Bryant, LeBron James,
+        Magic Johnson, Larry Bird i Shaquille O'Neal
+        spadaju među najveće legende NBA historije.
+    </p>
+</div>
+
+<div id="rekordi" class="sekcija">
+
+    <h2>NBA Rekordi</h2>
+
+    <div class="rekordi-grid">
+
+        <div class="rekord-card">
+            <h1>100</h1>
+            <h3>Wilt Chamberlain</h3>
+
+            <p>
+                Najviše poena na jednoj NBA utakmici.
+            </p>
+        </div>
+
+        <div class="rekord-card aktivna-kartica">
+            <h1>3PT</h1>
+            <h3>Stephen Curry</h3>
+
+            <p>
+                Najviše pogođenih trojki u NBA historiji.
+            </p>
+        </div>
+
+        <div class="rekord-card">
+            <h1>6</h1>
+            <h3>Kareem Abdul-Jabbar</h3>
+
+            <p>
+                Najviše MVP nagrada u NBA ligi.
+            </p>
+        </div>
+
+        <div class="rekord-card">
+            <h1>11</h1>
+            <h3>Bill Russell</h3>
+
+            <p>
+                Najviše NBA titula osvojenih kao igrač.
+            </p>
+        </div>
+
+        <div class="rekord-card">
+            <h1>30/20/20</h1>
+            <h3>Nikola Jokić</h3>
+
+            <p>
+                Historijska triple-double utakmica.
+            </p>
+        </div>
+
+        <div class="rekord-card">
+            <h1>10x</h1>
+            <h3>Michael Jordan</h3>
+
+            <p>
+                Deset puta najbolji strijelac NBA sezone.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+<div id="trofej" class="sekcija">
+
+    <h2>Larry O'Brien Trophy</h2>
+
+    <p>
+        Larry O'Brien Trophy je trofej koji se dodjeljuje
+        NBA šampionu nakon osvajanja finala.
+    </p>
+
+    <table>
+
+        <tr>
+            <th>Mjesto</th>
+            <th>Tim</th>
+            <th>Broj titula</th>
+        </tr>
+
+       <tr>
+    <td>1.</td>
+    <td class="tim">
+        <img src="images/celtics.png" alt="Celtics">
+        Boston Celtics
+    </td>
+    <td>18</td>
+</tr>
+
+<tr>
+    <td>2.</td>
+    <td class="tim">
+        <img src="images/lakers.png" alt="Lakers">
+        Los Angeles Lakers
+    </td>
+    <td>17</td>
+</tr>
+
+<tr>
+    <td>3.</td>
+    <td class="tim">
+        <img src="images/warriors.png" alt="Warriors">
+        Golden State Warriors
+    </td>
+    <td>7</td>
+</tr>
+
+<tr>
+    <td>4.</td>
+    <td class="tim">
+        <img src="images/bulls.png" alt="Bulls">
+        Chicago Bulls
+    </td>
+    <td>6</td>
+</tr>
+
+<tr>
+    <td>5.</td>
+    <td class="tim">
+        <img src="images/spurs.png" alt="Spurs">
+        San Antonio Spurs
+    </td>
+    <td>5</td>
+</tr>
+
+<tr>
+    <td>6.</td>
+    <td class="tim">
+        <img src="images/heat.png" alt="Heat">
+        Miami Heat
+    </td>
+    <td>3</td>
+</tr>
+
+<tr>
+    <td>7.</td>
+    <td class="tim">
+        <img src="images/pistons.png" alt="Pistons">
+        Detroit Pistons
+    </td>
+    <td>3</td>
+</tr>
+
+<tr>
+    <td>8.</td>
+    <td class="tim">
+        <img src="images/sixers.png" alt="76ers">
+        Philadelphia 76ers
+    </td>
+    <td>3</td>
+</tr>
+
+<tr>
+    <td>9.</td>
+    <td class="tim">
+        <img src="images/rockets.png" alt="Rockets">
+        Houston Rockets
+    </td>
+    <td>2</td>
+</tr>
+
+<tr>
+    <td>10.</td>
+    <td class="tim">
+        <img src="images/knicks.png" alt="Knicks">
+        New York Knicks
+    </td>
+    <td>2</td>
+</tr>
+    </table>
+
+</div>
+<div id="ere" class="sekcija">
+
+    <h2 class="ere-title">
+        NBA ERE
+    </h2>
+
+    <div class="era-box">
+
+        <h3>Od 1946. do moderne ere trojki</h3>
+
+        <p>
+            NBA liga prošla je kroz mnoge legendarne periode —
+            od dominacije Billa Russella i Lakers-Celtics rivalstva,
+            preko Jordanove ere 90-ih, pa sve do moderne košarke
+            Stephena Curryja, LeBrona Jamesa i Nikole Jokića.
+        </p>
+
+    </div>
+
+</div>
+<div id="mvp" class="sekcija">
+
+    <h2 style="text-align:center;">
+        TOP 10 MVP NBA
+    </h2>
+
+    <table>
+
+        <tr>
+            <th>Mjesto</th>
+            <th>Igrač</th>
+            <th>MVP nagrade</th>
+        </tr>
+
+        <tr>
+            <td>1.</td>
+            <td>Kareem Abdul-Jabbar</td>
+            <td>6</td>
+        </tr>
+
+        <tr>
+            <td>2.</td>
+            <td>Michael Jordan</td>
+            <td>5</td>
+        </tr>
+
+        <tr>
+            <td>3.</td>
+            <td>Bill Russell</td>
+            <td>5</td>
+        </tr>
+
+        <tr>
+            <td>4.</td>
+            <td>LeBron James</td>
+            <td>4</td>
+        </tr>
+
+        <tr>
+            <td>5.</td>
+            <td>Wilt Chamberlain</td>
+            <td>4</td>
+        </tr>
+
+        <tr>
+            <td>6.</td>
+            <td>Magic Johnson</td>
+            <td>3</td>
+        </tr>
+
+        <tr>
+            <td>7.</td>
+            <td>Larry Bird</td>
+            <td>3</td>
+        </tr>
+
+        <tr>
+            <td>8.</td>
+            <td>Moses Malone</td>
+            <td>3</td>
+        </tr>
+
+        <tr>
+            <td>9.</td>
+            <td>Nikola Jokić</td>
+            <td>3</td>
+        </tr>
+
+        <tr>
+            <td>10.</td>
+            <td>Stephen Curry</td>
+            <td>2</td>
+        </tr>
+
+    </table>
+
+</div>
+</section>
+
+</main>
+
+<aside>
+
+    <h3>NBA video</h3>
+
+    <video width="100%" autoplay muted loop controls>
+
+        <source src="Images/NbaVideo.mp4" type="video/mp4">
+
+    </video>
+
+    <p>
+        Video prikazuje atraktivne NBA poteze,
+        zakucavanja i historijske momente.
+    </p>
+
+</aside>
+</div>
+
+<section class="counter-section">
+
+    <div class="counter-box">
+        <h2 id="brojPosjeta">0</h2>
+        <p>Posjeta stranici</p>
+    </div>
+
+</section>
+<footer>
+
+    <p>
+        Autori: Sabanovic Dario,
+        David Tanaskovic,
+        Dino Lisic | 2026
+    </p>
+
+    <p>
+        <a href="https://www.nba.com/" target="_blank">
+            NBA.com
+        </a>
+
+        |
+
+        <a href="https://www.instagram.com/nba/" target="_blank">
+            Instagram
+        </a>
+    </p>
+
+</footer>
+
+<script src="js/tptpskripte.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1043 @@
+/* =========================================
+   CSS VARIJABLE
+   ========================================= */
+
+:root {
+  --color-primary: #fdb927;
+  --color-bg-body: #0a0a0a;
+  --color-bg-card: #151515;
+  --color-bg-header: #111;
+  --color-bg-alt: #222;
+
+  --color-text-light: #ffffff;
+  --color-text-muted: #aaaaaa;
+  --color-border: #333333;
+
+  --color-error: #ff6666;
+  --color-success: #7CFC00;
+
+  --border-radius-lg: 15px;
+  --border-radius-sm: 8px;
+
+  --transition-fast: 0.3s ease;
+}
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--color-bg-body);
+  color: var(--color-text-light);
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+  background: var(--color-bg-header);
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: var(--color-primary);
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.menu {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+}
+
+header .menu a,
+header .menu a:visited {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+header .menu a:hover {
+    color: #fdb927;
+}
+.menu a:hover {
+  color: #fdb927;
+}
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+  padding: 70px 30px;
+  text-align: center;
+
+  background:
+  linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+  url("https://images.unsplash.com/photo-1519861531473-9200262188bf?q=80&w=1600")
+  center/cover;
+}
+
+.hero h1 {
+  font-size: 55px;
+  color: var(--color-primary);
+}
+
+/* =========================================
+   LAYOUT
+   ========================================= */
+
+.layout {
+  display: grid;
+  grid-template-columns: 220px 1fr 300px;
+  gap: 25px;
+  padding: 30px;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 35px;
+}
+
+section {
+  margin: 45px 0;
+}
+
+nav,
+aside {
+  background: var(--color-bg-card);
+  padding: 20px;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--color-border);
+  height: max-content;
+}
+
+/* =========================================
+   DUGMAD
+   ========================================= */
+
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  font-weight: bold;
+  transition: var(--transition-fast);
+}
+
+nav button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  background: var(--color-bg-alt);
+  color: var(--color-text-light);
+  border: 1px solid var(--color-border);
+}
+
+nav button:hover {
+  background: var(--color-primary);
+  color: black;
+}
+
+/* =========================================
+   CARDS
+   ========================================= */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.card {
+  background: var(--color-bg-card);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  transition: var(--transition-fast);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 20px rgba(253,185,39,.1);
+}
+
+.card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  color: var(--color-primary);
+  margin-bottom: 10px;
+}
+
+.card-content a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* =========================================
+   SEKCIJE IZ MENIJA
+   ========================================= */
+
+.sekcija {
+  display: none;
+  background: var(--color-bg-card);
+  padding: 25px;
+  border-radius: var(--border-radius-lg);
+  margin-top: 25px;
+  border: 1px solid var(--color-border);
+}
+
+.aktivna-sekcija {
+  display: block;
+}
+
+.sekcija h2 {
+  color: var(--color-primary);
+  margin-bottom: 15px;
+}
+
+/* =========================================
+   TABELE
+   ========================================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-bg-card);
+}
+
+th,
+td {
+  padding: 14px;
+  border: 1px solid var(--color-border);
+  text-align: left;
+}
+
+th {
+  background: var(--color-bg-alt);
+  color: var(--color-primary);
+}
+
+/* =========================================
+   GALERIJA
+   ========================================= */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* =========================================
+   VIDEO
+   ========================================= */
+
+aside iframe {
+  width: 100%;
+  height: 220px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+/* =========================================
+   KONTAKT FORMA
+   ========================================= */
+
+form {
+  background: var(--color-bg-card);
+  padding: 25px;
+  border-radius: var(--border-radius-lg);
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  color: var(--color-primary);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: var(--border-radius-sm);
+  border: 2px solid transparent;
+  transition: var(--transition-fast);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.submit {
+  background: var(--color-primary);
+  color: black;
+}
+
+.reset {
+  background: var(--color-border);
+  color: white;
+}
+
+.error,
+.greska {
+  color: var(--color-error);
+  font-size: 14px;
+}
+
+.invalid {
+  border-color: var(--color-error);
+}
+
+.success {
+  color: var(--color-success);
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+  text-align: center;
+  background: #000;
+  padding: 25px;
+  color: var(--color-text-muted);
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1024px) {
+
+  .layout {
+    grid-template-columns: 200px 1fr;
+    padding: 20px;
+  }
+
+  aside {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .cards,
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .header-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  table {
+    font-size: 11px;
+    display: block;
+    overflow-x: auto;
+  }
+}
+.aktivna-sekcija {
+    display: block;
+}
+/* =========================================
+   NBA REKORDI KARTICE
+   ========================================= */
+
+.rekordi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.rekord-card {
+    background: #111;
+    border: 1px solid #2d2d2d;
+    border-radius: 28px;
+    padding: 35px;
+    transition: 0.3s;
+}
+
+.rekord-card:hover {
+    transform: translateY(-6px);
+    border-color: #fdb927;
+}
+
+.rekord-card h1 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 14px;
+    font-weight: bold;
+}
+
+.rekord-card h3 {
+    color: #fdb927;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.rekord-card p {
+    color: #d0d0d0;
+    font-size: 14px;
+    line-height: 1.3;
+}.aktivna-kartica {
+    border-top: 6px solid #fdb927;
+}
+
+/* =========================================
+   RESPONSIVE REKORDI
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .rekordi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .rekordi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rekord-card h1 {
+        font-size: 50px;
+    }
+}
+.trofej-naslov {
+    margin-bottom: 25px;
+    color: #fdb927;
+}
+#trofej table {
+    margin-top: 10px;
+}
+#trofej {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#trofej table {
+    width: 100%;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+#trofej th,
+#trofej td {
+    padding: 10px;
+}
+.tim {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tim img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+.ere-title {
+    text-align: center;
+    color: #fdb927;
+    margin-bottom: 25px;
+}
+
+.era-box {
+    background: #111;
+    border-left: 5px solid #fdb927;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.era-box h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.era-box p {
+    color: #cccccc;
+    line-height: 1.7;
+}
+
+span {
+    color: red;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#success {
+    color: lightgreen;
+    font-weight: bold;
+    margin-top: 15px;
+}
+form {
+    background: linear-gradient(145deg, #181818, #0f0f0f);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(255, 196, 0, 0.15);
+    border: 1px solid rgba(255, 196, 0, 0.2);
+}
+
+header .menu {
+    background: transparent;
+    border: none;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+}
+
+header .menu a,
+header .menu a:visited {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+header .menu a:hover {
+    color: #fdb927;
+}
+.glavni-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.glavni-header .logo {
+    margin-right: auto;
+}
+
+.glavni-header .menu {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.glavni-header .menu a,
+.glavni-header .menu a:visited {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.sadrzaj-meni {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.sadrzaj-meni a {
+    background: #181818;
+
+    color: white;
+    text-decoration: none;
+
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+    border: 1px solid #2c2c2c;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.sadrzaj-meni a:hover {
+    background: #fdb927;
+    color: black;
+
+    transform: translateY(-2px);
+}
+/* GALERIJA NBA LEGENDI */
+
+#galerija div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#galerija figure{
+    width: 180px;
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#galerija img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#galerija figcaption{
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.goat-container{
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.image-wrapper{
+    position: relative;
+    width: 500px;
+}
+
+.image-wrapper img{
+    width: 500px;
+    display: block;
+    border-radius: 10px;
+}
+
+/* CRVENA TAČKA */
+
+.hotspot{
+    position: absolute;
+
+    top: 120px;
+    left: 245px;
+
+    width: 35px;
+    height: 35px;
+
+    background: red;
+
+    border: 4px solid white;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    padding: 0;
+    margin: 0;
+}
+
+/* PANEL */
+
+.info-panel{
+    width: 420px;
+    min-height: 520px;
+    max-height: 740px;
+    overflow-y: auto;
+
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+
+    display: none;
+}
+.info-panel.active{
+    display: block;
+}
+
+.info-panel h3{
+    color: #fdb927;
+    margin-bottom: 15px;
+}
+
+.info-panel h4{
+    color: gold;
+    margin-top: 15px;
+}
+
+.info-panel ul{
+    padding-left: 20px;
+}
+
+.close-btn{
+    float: right;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    margin: 0;
+    padding: 0;
+}
+
+.close-btn:hover{
+    color: #fdb927;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px){
+
+    .goat-container{
+        flex-direction: column;
+    }
+
+    .info-panel{
+        width: 100%;
+    }
+
+    .image-wrapper,
+    .image-wrapper img{
+        width: 100%;
+    }
+}
+.vrh-dugme{
+    margin-top: 25px;
+}
+
+.vrh-dugme a{
+    display: inline-block;
+
+    background: linear-gradient(135deg, #fdb927, #ffcc33);
+
+    color: black;
+
+    text-decoration: none;
+
+    padding: 12px 22px;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+
+    box-shadow: 0 4px 15px rgba(253,185,39,0.3);
+}
+
+.vrh-dugme a:hover{
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(253,185,39,0.5);
+
+    background: linear-gradient(135deg, #ffcc33, #fdb927);
+}
+/* COUNTER */
+
+.counter-section{
+    display: flex;
+
+    justify-content: center;
+
+    margin: 70px 0 40px 0;
+}
+
+.counter-box{
+    background: linear-gradient(145deg, #181818, #0f0f0f);
+
+    border: 1px solid rgba(253,185,39,0.25);
+
+    border-radius: 25px;
+
+    padding: 40px 70px;
+
+    text-align: center;
+
+    box-shadow: 0 0 30px rgba(253,185,39,0.12);
+
+    transition: 0.3s;
+}
+
+.counter-box:hover{
+    transform: translateY(-6px);
+
+    box-shadow: 0 0 40px rgba(253,185,39,0.25);
+
+    border-color: #fdb927;
+}
+
+.counter-box h2{
+    font-size: 70px;
+
+    color: #fdb927;
+
+    margin-bottom: 10px;
+
+    font-weight: bold;
+}
+
+.counter-box p{
+    font-size: 20px;
+
+    color: white;
+
+    letter-spacing: 1px;
+
+    font-weight: bold;
+}
+
+.tema-wrapper{
+    margin-top: 30px;
+}
+
+#tema-dugme{
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(10px);
+
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    padding: 14px 24px;
+
+    border-radius: 14px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.25);
+}
+
+#tema-dugme:hover{
+    transform: translateY(-3px);
+
+    background: #fdb927;
+
+    color: black;
+}
+/* LIGHT MODE */
+
+body.light-theme{
+    background: #f5f5f5;
+    color: #111;
+}
+
+body.light-theme header{
+    background: white;
+}
+
+body.light-theme .hero{
+    background:
+    linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.6)),
+    url("https://images.unsplash.com/photo-1519861531473-9200262188bf?q=80&w=1600")
+    center/cover;
+}
+
+body.light-theme .logo,
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3{
+    color: #111;
+}
+
+body.light-theme p,
+body.light-theme li,
+body.light-theme td{
+    color: #222;
+}
+
+body.light-theme .menu a{
+    color: #111;
+}
+
+body.light-theme section,
+body.light-theme .card,
+body.light-theme .info-panel,
+body.light-theme .counter-box,
+body.light-theme table,
+body.light-theme form,
+body.light-theme nav,
+body.light-theme aside{
+    background: white;
+    color: black;
+    border-color: #ddd;
+}
+
+body.light-theme th{
+    background: #ececec;
+    color: black;
+}
+
+body.light-theme footer{
+    background: #e9e9e9;
+    color: #111;
+}
+/* LIGHT MODE EXTRA */
+
+body.light-theme input,
+body.light-theme textarea,
+body.light-theme select{
+    background: #f4f4f4;
+    color: black;
+    border: 2px solid #d8d8d8;
+}
+
+body.light-theme input:focus,
+body.light-theme textarea:focus,
+body.light-theme select:focus{
+    border-color: #fdb927;
+}
+
+body.light-theme #galerija figure{
+    background: white;
+    border: 1px solid #ddd;
+}
+
+body.light-theme figcaption{
+    color: black;
+}
+
+body.light-theme .rekord-card{
+    background: white;
+    border: 1px solid #ddd;
+}
+
+body.light-theme .rekord-card p{
+    color: #222;
+}
+
+body.light-theme .era-box{
+    background: white;
+    border-left: 5px solid #fdb927;
+}
+
+body.light-theme .era-box p{
+    color: #222;
+}
+
+body.light-theme .sadrzaj-meni a{
+    background: white;
+    color: black;
+    border: 1px solid #ddd;
+}
+
+body.light-theme .sadrzaj-meni a:hover{
+    background: #fdb927;
+    color: black;
+}body.light-theme nav button{
+    background: #f2f2f2;
+    color: black;
+    border: 1px solid #d6d6d6;
+}
+
+body.light-theme nav button:hover{
+    background: #fdb927;
+    color: black;
+}
+
+body.light-theme .sekcija{
+    background: white;
+    color: black;
+}
+
+body.light-theme .sekcija h2{
+    color: #111;
+}
+body.light-theme header,
+body.light-theme .glavni-header{
+    background: white;
+}
+
+body.light-theme header .menu a,
+body.light-theme header .menu a:visited,
+body.light-theme .glavni-header .menu a,
+body.light-theme .glavni-header .menu a:visited{
+    color: #111 !important;
+}
+
+body.light-theme header .menu a:hover,
+body.light-theme .glavni-header .menu a:hover{
+    color: #fdb927 !important;
+}

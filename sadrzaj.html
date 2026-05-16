@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="bs">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>NBA Historija - Sadržaj</title>
+
+ <link rel="stylesheet" href="css/tptpstil.css">
+
+<!-- poziv css-->
+
+</head>
+
+<body id="vrh">
+
+<header class="glavni-header">
+
+    <h1 class="logo">
+        NBA Enciklopedija
+    </h1>
+
+    <nav class="menu">
+        <a href="index.html">Početna</a>
+        <a href="sadrzaj.html">Sadržaj</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+</header>
+
+<main>
+
+<section>
+
+    <h2>NBA vodič</h2>
+
+   <nav class="sadrzaj-meni">
+
+    <a href="#tabela">Tabela</a>
+
+    <a href="#galerija">Galerija</a>
+
+    <a href="#mapa">GOAT košarke</a>
+
+    <a href="#liste">NBA ere</a>
+
+</nav>
+    <!--uslovi strukture dokumenta sadrzaj.html -->
+
+</section>
+
+<section id="tabela">
+<!--doraditi css -->
+    <h2>Najveći timovi svih vremena</h2>
+
+<table>
+
+    <tr>
+        <th>Tim</th>
+        <th>Sezona</th>
+        <th>Omjer</th>
+        <th>NBA titula</th>
+        <th>Glavna zvijezda</th>
+    </tr>
+
+    <tr>
+        <td>Chicago Bulls</td>
+        <td>1995/96</td>
+        <td>72-10</td>
+        <td>Da</td>
+        <td>Michael Jordan</td>
+    </tr>
+
+    <tr>
+        <td>Golden State Warriors</td>
+        <td>2016/17</td>
+        <td>67-15</td>
+        <td>Da</td>
+        <td>Stephen Curry / Kevin Durant</td>
+    </tr>
+
+    <tr>
+        <td>Los Angeles Lakers</td>
+        <td>1986/87</td>
+        <td>65-17</td>
+        <td>Da</td>
+        <td>Magic Johnson</td>
+    </tr>
+
+    <tr>
+        <td>Boston Celtics</td>
+        <td>1985/86</td>
+        <td>67-15</td>
+        <td>Da</td>
+        <td>Larry Bird</td>
+    </tr>
+
+    <tr>
+        <td>San Antonio Spurs</td>
+        <td>2013/14</td>
+        <td>62-20</td>
+        <td>Da</td>
+        <td>Tim Duncan / Kawhi Leonard</td>
+    </tr>
+
+</table>
+
+    <p>
+       <p class="vrh-dugme">
+    <a href="#vrh">⬆ Skoči na vrh</a>
+</p>
+
+</section>
+
+<section id="galerija">
+
+    <h2>Galerija NBA legendi</h2>
+
+    <div>
+
+        <figure>
+
+            <img src="images/jordan.jpg"
+            alt="Michael Jordan u skoku prema košu">
+
+            <!--AI ChatGBT -->
+
+            <figcaption>
+                Michael Jordan — legenda Chicago Bullsa.
+            </figcaption>
+
+        </figure>
+
+        <figure>
+
+            <img src="images/kobe.jpg"
+            alt="Kobe Bryant u dresu Los Angeles Lakersa">
+
+            <figcaption>
+                Kobe Bryant — simbol Mamba mentaliteta.
+            </figcaption>
+
+        </figure>
+
+        <figure>
+
+            <img src="images/lebron.jpg"
+            alt="LeBron James tokom NBA utakmice">
+
+            <figcaption>
+                LeBron James — jedan od najkompletnijih igrača.
+
+                <!--AI ChatGBT -->
+
+            </figcaption>
+
+        </figure>
+
+        <figure>
+
+            <img src="images/curry.jpg"
+            alt="Stephen Curry šutira za tri poena">
+
+            <figcaption>
+                Stephen Curry — najbolji šuter za tri poena.
+
+                <!--AI ChatGBT -->
+
+            </figcaption>
+
+        </figure>
+
+        <figure>
+
+            <img src="images/jokic.jpg"
+            alt="Nikola Jokić kao centar Denver Nuggetsa">
+
+            <figcaption>
+                Nikola Jokić — MVP centar Denver Nuggetsa.
+            </figcaption>
+            <!-- komentar na sliku -->
+
+        </figure>
+
+        <figure>
+
+            <img src="images/shaq.jpg"
+            alt="Shaquille O'Neal pod košem">
+
+            <figcaption>
+                Shaquille O'Neal — dominantni NBA centar.
+            </figcaption>
+            <!-- slike stavljene vec -->
+
+        </figure>
+
+    </div>
+<p class="vrh-dugme">
+    <a href="#vrh">⬆ Skoči na vrh</a>
+</p>
+</section>
+
+
+
+<section id="mapa">
+
+    <h2>GOAT Košarke Michael Jordan</h2>
+    <p>Klikni na crvenu tačku.</p>
+
+    <div class="goat-container">
+
+        <div class="image-wrapper">
+
+            <img src="images/jordann.jpg" 
+            alt="Michael Jordan u Bulls dresu">
+
+            <button class="hotspot" onclick="toggleInfo()" type="button"></button>
+
+        </div>
+
+        <div class="info-panel" id="infoPanel">
+
+            <button class="close-btn" onclick="toggleInfo()" type="button">&times;</button>
+
+          <h3>Michael Jordan — sve o legendi</h3>
+
+<p>
+Michael Jordan smatra se najvećim košarkašem svih vremena i jednom od najvećih sportskih ikona u historiji. Rođen je 17. februara 1963. godine u Brooklynu, New York. Najveći dio karijere proveo je u Chicago Bullsima gdje je promijenio historiju NBA lige.
+</p>
+
+<h4>NBA karijera</h4>
+
+<ul>
+    <li>Chicago Bulls (1984–1993, 1995–1998)</li>
+    <li>Washington Wizards (2001–2003)</li>
+    <li>6 NBA titula</li>
+    <li>6x NBA Finals MVP</li>
+    <li>5x NBA MVP</li>
+    <li>14x NBA All-Star</li>
+    <li>10x najbolji strijelac NBA lige</li>
+    <li>Defensive Player of the Year 1988.</li>
+</ul>
+
+<h4>Dominacija u NBA ligi</h4>
+
+<p>
+Jordan je bio poznat po nevjerovatnoj brzini, eksplozivnosti, zakucavanjima i sposobnosti da postiže poene kada je najpotrebnije. Njegova rivalstva sa ekipama kao što su Detroit Pistons, New York Knicks i Utah Jazz obilježila su NBA devedesetih godina.
+</p>
+
+<p>
+Sa Scottiejem Pippenom i trenerom Philom Jacksonom stvorio je jednu od najvećih dinastija u historiji sporta. Chicago Bullsi osvojili su dva "three-peata", odnosno dvije serije po tri uzastopne titule.
+</p>
+
+<h4>Globalni uticaj</h4>
+
+<p>
+Michael Jordan učinio je NBA globalno popularnom. Njegove Air Jordan patike postale su simbol kulture i sporta širom svijeta. Bio je član legendarnog Dream Teama iz 1992. godine koji je osvojio olimpijsko zlato.
+</p>
+
+<h4>Naslijeđe</h4>
+
+<p>
+Jordan je ostao simbol pobjedničkog mentaliteta, discipline i liderstva. Mnogi igrači današnjice, uključujući Kobea Bryanta i LeBrona Jamesa, navode ga kao najveći uzor u karijeri.
+</p>
+
+        </div>
+
+    </div>
+
+</section>
+<p class="vrh-dugme">
+    <a href="#vrh">⬆ Skoči na vrh</a>
+</p>
+</section>
+
+<section id="liste">
+
+<h2>Zanimljivosti o NBA erama</h2>
+<!-- pokazivanje ugnjezdenih kao sto se trazilo u html strokturi, ne mjenjati puno -->
+
+<ul>
+
+<li>
+Početna NBA era (1946–1960)
+
+<ul>
+<li>NBA liga osnovana je 1946. godine.</li>
+<li>Košarka je tada bila manje popularna nego danas.</li>
+<li>Igralo se mnogo sporije nego u modernoj eri.</li>
+<li>George Mikan bio je prva velika NBA zvijezda.</li>
+<li>Minneapolis Lakersi dominirali su ligom.</li>
+<li>Timovi su imali manje igrača i manji budžet.</li>
+<li>Televizijski prenosi bili su rijetki.</li>
+<li>Pravila igre bila su drugačija nego danas.</li>
+<li>Nije postojao šut za tri poena.</li>
+<li>Ova era postavila je temelje moderne NBA lige.</li>
+</ul>
+
+</li>
+
+<li>
+Era Boston Celticsa (1960–1980)
+
+<ul>
+<li>Boston Celticsi osvojili su veliki broj titula.</li>
+<li>Bill Russell bio je lider dominantne ekipe.</li>
+<li>Russell je poznat po sjajnoj odbrani i skokovima.</li>
+<li>Celticsi su osvojili 11 titula u 13 sezona.</li>
+<li>Rivalstvo sa Lakersima postalo je veoma poznato.</li>
+<li>NBA je postajala sve popularnija u Americi.</li>
+<li>Wilt Chamberlain postavio je brojne rekorde.</li>
+<li>Utakmice su bile veoma fizički zahtjevne.</li>
+<li>Timska igra bila je važnija od individualizma.</li>
+<li>Ova era donijela je prve velike NBA dinastije.</li>
+</ul>
+
+</li>
+
+<li>
+Magic vs Bird era (1980–1990)
+
+<ul>
+<li>Rivalstvo Magica Johnsona i Larryja Birda obilježilo je eru.</li>
+<li>Los Angeles Lakersi i Boston Celticsi dominirali su ligom.</li>
+<li>NBA popularnost naglo je porasla širom svijeta.</li>
+<li>Magic Johnson bio je poznat po asistencijama.</li>
+<li>Larry Bird bio je jedan od najboljih šutera.</li>
+<li>Finala između Lakersa i Celticsa bila su legendarna.</li>
+<li>Televizijski prenosi postali su veoma gledani.</li>
+<li>NBA je dobila više sponzora i medijske pažnje.</li>
+<li>Igra je postala brža i atraktivnija.</li>
+<li>Ova era pripremila je dolazak Michaela Jordana.</li>
+</ul>
+
+</li>
+
+<li>
+Jordan era (1990–1998)
+
+<ul>
+<li>Michael Jordan postao je najveća NBA zvijezda.</li>
+<li>Chicago Bullsi osvojili su šest titula.</li>
+<li>Jordan je osvojio pet MVP nagrada.</li>
+<li>Njegova zakucavanja postala su legendarna.</li>
+<li>NBA je postala globalno popularna.</li>
+<li>Bullsi su imali sjajan tim sa Scottiejem Pippenom.</li>
+<li>Jordan je bio poznat po pobjedničkom mentalitetu.</li>
+<li>Finala Bullsa pratili su milioni gledalaca.</li>
+<li>Air Jordan patike postale su svjetski poznate.</li>
+<li>Mnogi smatraju Jordana najvećim igračem svih vremena.</li>
+</ul>
+
+</li>
+
+<li>
+Post Jordan era (1999–2010)
+
+<ul>
+<li>Nakon Jordana NBA je dobila nove zvijezde.</li>
+<li>Kobe Bryant i Shaquille O'Neal dominirali su ligom.</li>
+<li>Los Angeles Lakersi osvojili su tri uzastopne titule.</li>
+<li>Timovi su igrali veoma jaku odbranu.</li>
+<li>Tim San Antonio Spurs osvojio je više titula.</li>
+<li>Timska košarka postala je veoma važna.</li>
+<li>Allen Iverson bio je simbol ulične košarke.</li>
+<li>LeBron James pojavio se kao nova superzvijezda.</li>
+<li>NBA je dobila mnogo internacionalnih igrača.</li>
+<li>Ova era povezala je staru i modernu NBA košarku.</li>
+</ul>
+
+</li>
+
+<li>
+LeBron era (2010–2018)
+
+<ul>
+<li>LeBron James dominirao je NBA ligom.</li>
+<li>Miami Heat osvojio je dvije titule zaredom.</li>
+<li>LeBron je poznat po snazi i inteligenciji.</li>
+<li>Golden State Warriorsi postali su nova sila.</li>
+<li>Stephen Curry promijenio je način šutiranja trojki.</li>
+<li>NBA igra postala je mnogo brža.</li>
+<li>Šut za tri poena postao je najvažnije oružje.</li>
+<li>Kevin Durant pridružio se Warriorsima.</li>
+<li>Finala Warriorsa i Cavaliersa bila su veoma popularna.</li>
+<li>Ova era donijela je modernu napadačku košarku.</li>
+</ul>
+
+</li>
+
+<li>
+Moderna NBA era (2018–danas)
+
+<ul>
+<li>NBA danas ima mnogo mladih zvijezda.</li>
+<li>Nikola Jokić postao je jedan od najboljih centara.</li>
+<li>Luka Dončić impresionira svojim talentom.</li>
+<li>Timovi šutiraju više trojki nego ikada.</li>
+<li>Košarka je postala veoma brza i efikasna.</li>
+<li>Internacionalni igrači imaju veliku ulogu.</li>
+<li>Analitika se koristi u taktici timova.</li>
+<li>Victor Wembanyama smatra se velikim talentom.</li>
+<li>NBA ima ogromnu popularnost na društvenim mrežama.</li>
+<li>Moderna era nastavlja razvijati globalnu košarku.</li>
+</ul>
+
+</li>
+
+</ul>
+
+<p class="vrh-dugme">
+    <a href="#vrh">⬆ Skoči na vrh</a>
+</p>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>
+© 2026 NBA Historija |
+Autori: Sabanovic Dario,
+David Tanaskovic,
+Dino Lisic
+</p>
+
+</footer>
+
+<script src="js/tptpskripte.js"></script>
+
+</body>
+</html>
