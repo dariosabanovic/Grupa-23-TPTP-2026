@@ -3,6 +3,10 @@ function postaviTemu() {
 
     if (trenutnaTema === "light") {
         document.body.classList.add("light-theme");
+        const dugme = document.getElementById("tema-dugme");
+        if (dugme) {
+            dugme.textContent = "🌙 Tamni mod";
+        }
     }
 }
 
@@ -83,7 +87,7 @@ if (forma) {
 
         let samoSlova = /^[A-Za-zČĆŽŠĐčćžšđ\s]+$/;
         let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        let telefonRegex = /^[0-9]+$/;
+        let telefonRegex = /^[0-9\s\-]+$/;
 
         let zabranjeneRijeci = ["glup", "budala", "psovka", "asdf", "qwerty"];
 
@@ -136,7 +140,7 @@ if (forma) {
         }
 
         if (ispravno) {
-            document.getElementById("success").textContent = "Upit je uspješno poslan.";
+            document.getElementById("success").textContent = "Hvala, " + ime + "! Upit je uspješno poslan.";
             forma.reset();
         }
     });
@@ -155,4 +159,22 @@ posjete++;
 
 localStorage.setItem("brojPosjeta", posjete);
 
-document.getElementById("brojPosjeta").textContent = posjete;
+const brojEl = document.getElementById("brojPosjeta");
+if (brojEl) {
+    brojEl.textContent = posjete;
+}
+
+
+const resetDugme = document.querySelector('button[type="button"]');
+if (resetDugme) {
+    resetDugme.addEventListener("click", function() {
+        if (forma) {
+            forma.reset();
+        }
+        ["imeError","prezimeError","emailError",
+         "telefonError","temaError","porukaError"].forEach(function(id) {
+            document.getElementById(id).textContent = "";
+        });
+        document.getElementById("success").textContent = "";
+    });
+}
